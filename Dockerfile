@@ -5,11 +5,11 @@ ARG VCS_REF
 ARG VERSION
 LABEL mantainer="Eloy Lopez <elswork@gmail.com>" \
     org.label-schema.build-date=$BUILD_DATE \
-    org.label-schema.name="tf-jupyterlab" \
+    org.label-schema.name="tf-jupyterlab-py2" \
     org.label-schema.description="JupyterLab + Tensorflow for amd64 and arm32v7" \
     org.label-schema.url="https://deft.work" \
     org.label-schema.vcs-ref=$VCS_REF \
-    org.label-schema.vcs-url="https://github.com/DeftWork/tf-jupyterlab" \
+    org.label-schema.vcs-url="https://github.com/DeftWork/tf-jupyterlab-py2" \
     org.label-schema.vendor="Deft Work" \
     org.label-schema.version=$VERSION \
     org.label-schema.schema-version="1.0"
