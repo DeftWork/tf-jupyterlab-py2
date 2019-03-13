@@ -1,4 +1,5 @@
-FROM elswork/tensorflow-diy:latest-py2
+ARG BASEIMAGE=elswork/tensorflow-diy:latest-py2
+FROM ${BASEIMAGE}
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -20,14 +21,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN  pip --no-cache-dir install \
-     ipykernel \
-     jupyterlab \
-     #matplotlib \
-     #sklearn \
-     #pandas \
-     && \
-     python -m ipykernel.kernelspec	
+RUN pip --no-cache-dir install \
+    ipykernel \
+    jupyterlab \
+    && \
+    python3 -m ipykernel.kernelspec
 
 COPY jupyter_notebook_config.py /root/.jupyter/
 
